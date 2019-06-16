@@ -1,4 +1,61 @@
-deploy - é o conceito de enviar a aplicação para o ambiente de produção
-para que outros user, clientes etc poderem acessar no aplicação online
+-> comandos:
+ crt + / - comentar a linha
 
-- 
+
+- para criar um server mongo
+  - docker run --name mongonode -p 27017:27017 -d -t
+  - docker run  passa um nome, passa a porta, modo dtoche, -t a imagem
+  que vamos ultilizar.
+- docker start mongonode
+
+- instalar e configurar o ORM que vamos ultilizar p/ o mongo,
+no cap anterior usamos o sequeliza para bancos relacionais,
+aqui usaremos o mongose.
+  - yarn add mongose
+
+
+- sudo sysctl fs.inotify.max_user_watches=582222 && sudo sysctl -p
+
+- yarn add require-dir : para automatizar a importação dos arq controllers
+
+- yarn add mongoose-paginate - para fazer a paginação e nao ficar retornando
+tudo em um modo só.
+
+- yarn add nodemailer - para enviar email pelo node.
+
+- yarn add nodemailer-express-handlebars express-handlebars
+  - extenções para fazer templates simples
+
+- redis - para configurar a fila de envio de email para ser execultada
+em backgound.
+  - configurar o redis no banco de dados.
+  - para configurar no docker:
+    docker run --name noderedis(nome que criamos) -p 6379:6379 -d -t redis:alpine
+      - -t redis:alpine imagem do redis que usaremos
+      - docker start noderedis
+      - yarn add kue
+
+- yarn add join - para fazer as validações, essa biblilhoteca é basicamente uma
+schema validator ele reflete um obj contra um schema que é um outro obj que tem
+as validações e ve o que esta faltando ou errado.
+  - yarn add express-validation - biblilhoteca p/ colocar nas rotas
+  para fazer a validação
+
+
+- exception Handling - manusear e manipular as excessoes que podem acontecer
+durante o tempo de execulção da aplicação, será configurado no server.js
+
+
+- yarn add youch - dependencia é um formatador de erros, deixará os erros de
+uma forma mais legivel, em produção
+
+- yarn add express-async-handler - para conseguir enviar os erros que acontecem
+dentro das promises para o exception handler, OBS: no arq routes envolver os
+controles com o handle
+
+
+- yarn add @sentry/node - quando estamos em produção e nao temos visualização
+de erros que aparecem para o user o sentry vai nos mostrar esses erro. Precisamos
+user o site  deles.
+
+- yarn add dotenv - para criar variaveis ambientes

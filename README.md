@@ -1,67 +1,11 @@
-# Adonis API application
+# Challenge 03
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
+- In this challenge I've created a sales application to sell something and send an e-mail to seller when
+a user purchase something.
 
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
+- This app was made with nodeJS, mongodb and expressJS.
 
-## Setup
+- Nesse desafio, criei um aplicativo de vendas para vender algo e enviar um e-mail para o vendedor quando
+um usuário compra alguma coisa.
 
-Use the adonis command to install the blueprint
-
-```bash
-adonis new yardstick --api-only
-```
-
-or manually clone the repo and then run `npm install`.
-
-
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
-```
-
-# Application with CRUD Using:
-  - adonis
-  - validação
-  - Fila com Redis
-  - Paginação
-  - Hook
-  - sentry
-
-
-# The application does:
-  - User registration
-  - Authentication
-  - Password recovery
-  - Password Reset
-  - Upload files
-  - Creation of projects with tasks
-  - Validate routes
-  - Paging
-  - Sending emails
-
-# Aplicação com CRUD utilizando:
-  - adonis
-  - validação
-  - Fila com Redis
-  - Paginação
-  - Hook
-  - sentry
- 
-# A aplicação faz:
-  - Cadastro de usuário
-  - Autenticação
-  - Recuperação de senha
-  - Resete de senha
-  - Upload de arquivos
-  - Criação de projetos com tarefas
-  - Valida rotas
-  - Paginação
-  - Envio de emails
+- Esse app foi feito com nodeJS, mondodb e expressJS.
