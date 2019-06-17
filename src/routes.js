@@ -44,5 +44,9 @@ routes.post(
   handle(controllers.PurchaseController.store)
 )
 
+routes.get('/test', (req, res) => {
+  return res.send('Hello Word')
+})
+
 routes.put('/purchases/:id', handle(controllers.ApproveController.update))
 module.exports = routes
